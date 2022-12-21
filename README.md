@@ -49,117 +49,34 @@
   - **`Git`**
   - **`Bash>=3`**
 
-
-## Wait! it's not written in a fancy language
-
-And it doesn't have to be. Why?
-
-- Your focus should be on your **dot files & scripts** rather than on a dotfiles manager or how to use it.(_Wait I forgot what was the command to push files? Is it `dt push` or `dt --push`_)
-- Creating a overly-complex solution for something simple should not be the goal.
-
-
 ## 💠 Installation
 
-### via `curl` ➰
-
-```shell
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/Bhupesh-v/dotman/master/tools/install.sh)"
+clone this repository
+```bash
+git clone git@github.com:boychaboy/dotman.git
 ```
-
-### via `wget` 📥
-
-```shell
-sh -c "$(wget -O- https://raw.githubusercontent.com/Bhupesh-v/dotman/master/tools/install.sh)"
-```
-
-### via `httpie` 🥧
-
-```shell
-sh -c "$(http --download https://raw.githubusercontent.com/Bhupesh-v/dotman/master/tools/install.sh)"
-```
-
-> **dotman** is installed by default in `/home/username/dotman`, your `$HOME` directory.
-
 
 Now run **`dotman`** for 1st time set-up.
 
-1. Enter repository URL (without `.git`).
-2. Specify folder you want to clone the dotfile repo to (relative to `/home/username/`).
-3. Open up new terminal 🚀.
+1. Clone dotfile repository
+   ```bash
+   git clone git@github.com:boychaboy/dotfiles.git
+   ```
+2. Set alias for dotman in your `.bashrc`
+   ```bash
+   ++ alias dotman="/home1/irteam/dot/dotman/dotman.sh"
+   ```
+3. Export the path of `DOT_DEST`, `DOT_REPO` in your `.bashrc`
+   ```bash
+   +++ export DOT_DEST="dot"
+   +++ export DOT_REPO="git@github.com:boychaboy/dotfiles"
+   ```
+4. Restart your terminal (or `$ source ~/.bashrc`)
 
-### Manually (you ok ?)
-
-1. Just grab **dotman.sh** from [Releases 🔼](https://github.com/Bhupesh-V/dotman/releases) and store it anywhere on your system.
-2. Change file permissions to be 🏃 executable.
-  ```bash
-  chmod +x dotman.sh
-  ```
-3. Set alias for dotman _(optional)_. Alternatively modify your `.bash_aliases` file. 
-  ```bash
-  alias $(pwd)/dotman.sh=dotman
-  ```
-4. Run **dotman**.
-  ```bash
-  dotman.sh
-  ```
-
-## Usage
-
-Just run **`dotman`** anywhere in your terminal 🖖.
-
-```bash
-dotman
-```
-Leave the rest to it.
+5. Just run **`dotman`** anywhere in your terminal 🖖.
 
 
-## What else 👀
-
-dotman exports 2 variables in your default shell config (`bashrc`, `zshrc` etc):
-
-1. `DOT_DEST`: used for finding the location of dotfiles repository in your local system.
-2. `DOT_REPO`: the url to the remote dotfile repo.
-
-You can change these manually if any one of the info changes.
-
-
-## Author
-
-🤓 **Bhupesh Varshney**
-
-[Web](https://bhupesh-v.github.io) | [Twitter: @bhupeshimself](https://twitter.com/bhupeshimself) | [DEV: bhupesh](https://dev.to/bhupesh)
-
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
-
-## ☺️ Show your support
-
-Support me by giving a ⭐️ if this project helped you! or just [![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2FBhupesh-V%2Fdotman%2F)](https://twitter.com/intent/tweet?url=https://github.com/Bhupesh-V/dotman&text=dotman%20via%20@bhupeshimself)
-
-<a href="https://liberapay.com/bhupesh/donate">
-  <img title="librepay/bhupesh" alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg" width="100">
-</a>
-<a href="https://ko-fi.com/bhupesh">
-  <img title="ko-fi/bhupesh" alt="Support on ko-fi" src="https://user-images.githubusercontent.com/34342551/88784787-12507980-d1ae-11ea-82fe-f55753340168.png" width="185">
-</a>
-
-
-## 📝 License
-
-Copyright © 2020 [Bhupesh Varshney](https://github.com/Bhupesh-V).<br />
-This project is [MIT](https://github.com/Bhupesh-V/dotman/blob/master/LICENSE) licensed.
-
-## 📝 Changelog
-
-See the [CHANGELOG.md](CHANGELOG.md) file for details.
-
-## 👋 Contributing
-
-Please read the [CONTRIBUTING](CONTRIBUTING.md) file for the process of submitting pull requests to us.
-
-## ✨ Contributors
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
+### Contributors
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
